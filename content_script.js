@@ -7,12 +7,10 @@ const observer = new MutationObserver(() => {
     for (let i = 0; i < covers.length; i++) {
         const path = covers[i].pathname;
         const id = path.split('/')[2];
-        if (path.startsWith('/anime/') && animeList.has(id)) {
-            if (!covers[i].classList.contains('not-interested')) covers[i].classList.add('not-interested');
-        };
-        if (path.startsWith('/manga/') && mangaList.has(id)) {
-            if (!covers[i].classList.contains('not-interested')) covers[i].classList.add('not-interested');
-        };
+        if ((path.startsWith('/anime/') && animeList.has(id)) || (path.startsWith('/manga/') && mangaList.has(id))) {
+            if (!covers[i].classList.contains('not-interested')) covers[i].classList.add('not-interested'); 
+        }
+        else if (covers[i].classList.contains('not-interested')) covers[i].classList.remove('not-interested');
     }
 });
 
