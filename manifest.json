@@ -13,6 +13,9 @@
       ],
       "js": [
         "content_script.js"
+      ],
+      "css": [
+        "not-interested.css"
       ]
     }
   ],
@@ -20,5 +23,8 @@
     "gecko": {
       "id": "anilist-not-interested@nurdoidz.com"
     }
-  }
+  },
+  "permissions": [
+    "storage"
+  ]
 }

@@ -1,0 +1,4 @@
+a.cover.not-interested {
+    opacity: 0.15 !important;
+    filter: grayscale(100%);
+}
