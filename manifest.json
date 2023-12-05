@@ -9,7 +9,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.mozilla.org/*"
+        "*://*.anilist.co/*"
       ],
       "js": [
         "content_script.js"
