@@ -15,12 +15,5 @@
         "content_script.js"
       ]
     }
-  ],
-  "page_action": {
-    "default_icon": {
-      "64": "icons/icon.png"
-    },
-    "default_popup": "pageAction/index.html",
-    "default_title": "AniList Not Interested"
-  }
+  ]
 }
