@@ -15,5 +15,10 @@
         "content_script.js"
       ]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "anilist-not-interested@nurdoidz.com"
+    }
+  }
 }
