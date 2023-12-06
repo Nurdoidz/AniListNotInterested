@@ -1,0 +1,10 @@
+{
+  "buttonLabelUnadded": {
+    "message": "Not Interested",
+    "description": "Label of the button to add an anime or manga to the “not interested” list."
+  },
+  "buttonLabelAdded": {
+    "message": "Interested",
+    "description": "Label of the button to remove an anime or manga from the “not interested” list."
+  }
+}

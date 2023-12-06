@@ -20,23 +20,23 @@ function addNotInterestedButton() {
     
     if (isInterested) {
         buttonDiv.classList.add('add-not-interested');
-        buttonDiv.textContent = 'Not Interested';
+        buttonDiv.textContent = browser.i18n.getMessage("buttonLabelUnadded");
     }
     else {
         buttonDiv.classList.add('remove-not-interested');
-        buttonDiv.textContent = 'Interested';
+        buttonDiv.textContent = browser.i18n.getMessage("buttonLabelAdded");
     }
     
     buttonDiv.addEventListener('click', () => {
         if (isInterested) {
             list.add(id);
-            buttonDiv.textContent = 'Interested';
+            buttonDiv.textContent = browser.i18n.getMessage("buttonLabelAdded");
             buttonDiv.classList.add('remove-not-interested');
             buttonDiv.classList.remove('add-not-interested');
         }
         else {
             list.delete(id);
-            buttonDiv.textContent = 'Not Interested';
+            buttonDiv.textContent = browser.i18n.getMessage("buttonLabelUnadded");
             buttonDiv.classList.add('add-not-interested');
             buttonDiv.classList.remove('remove-not-interested');
         }
