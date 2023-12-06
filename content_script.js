@@ -1,4 +1,3 @@
-console.log('Hello from AniList Not Interested!');
 const animeList = new Set(JSON.parse(localStorage.getItem('notInterestedAnime')));
 const mangaList = new Set(JSON.parse(localStorage.getItem('notInterestedManga')));
 
@@ -18,7 +17,6 @@ function addNotInterestedButton() {
 
     const list = mediaType === 'anime' ? animeList : mangaList;
     let isInterested = !list.has(id);
-    console.log(isInterested);
     
     if (isInterested) {
         buttonDiv.classList.add('add-not-interested');
@@ -30,7 +28,6 @@ function addNotInterestedButton() {
     }
     
     buttonDiv.addEventListener('click', () => {
-        console.log(list);
         if (isInterested) {
             list.add(id);
             buttonDiv.textContent = 'Interested';
@@ -46,26 +43,18 @@ function addNotInterestedButton() {
         isInterested = !isInterested;
         const storageKey = mediaType === 'anime' ? 'notInterestedAnime' : 'notInterestedManga';
         localStorage.setItem(storageKey, JSON.stringify(Array.from(list)));
-        console.log(list);
     });
     
     actionsDiv.appendChild(buttonDiv);
 }
 
-const pageObserver = new MutationObserver((mutations) => {
-    console.log('DOM has changed');
-    mutations.forEach((mutation) => {
-        if (mutation.type === 'childList') {
-            console.log('Child div replaced:', mutation.target);
-        }
-    });
+const pageObserver = new MutationObserver(() => {
     if (rxMatchMediaAndId.test(document.baseURI)) addNotInterestedButton();
 });
-
 pageObserver.observe(document.querySelector('.page-content'), { childList: true });
 
 const domObserver = new MutationObserver(() => {
-    const covers = document.querySelectorAll('a.cover');
+    const covers = document.querySelectorAll('a.cover, a.title, div.title > a, a.favourite');
     for (let i = 0; i < covers.length; i++) {
         const path = covers[i].pathname;
         const id = path.split('/')[2];
