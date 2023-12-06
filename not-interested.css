@@ -2,3 +2,33 @@ a.cover.not-interested {
   opacity: 0.15 !important;
   filter: grayscale(100%);
 }
+.add-not-interested {
+  align-items: center;
+  background: rgb(var(--color-red-400));
+  border-radius: 5px;
+  color: rgb(var(--color-white));
+  cursor: pointer;
+  display: flex;
+  font-size: 1.4rem;
+  font-family: Overpass,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  height: 35px;
+  justify-content: center;
+  padding-left: 1px;
+  transition: .2s;
+  padding: 0 4px;
+}
+.remove-not-interested {
+  align-items: center;
+  background: rgb(var(--color-green-400));
+  border-radius: 5px;
+  color: rgb(var(--color-white));
+  cursor: pointer;
+  display: flex;
+  font-size: 1.4rem;
+  font-family: Overpass,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  height: 35px;
+  justify-content: center;
+  padding-left: 1px;
+  transition: .2s;
+  padding: 0 4px;
+}
